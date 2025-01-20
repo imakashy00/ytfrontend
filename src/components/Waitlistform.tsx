@@ -24,7 +24,7 @@ const Waitlistform = () => {
       setLoading(true);
       try {
         const response = await axios.post(
-          `${process.env.PUBLIC_API_URL}/api/endpoint`,
+          `${process.env.PUBLIC_API_URL}/register`,
           {
             email: email,
           }

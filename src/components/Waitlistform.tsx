@@ -23,9 +23,12 @@ const Waitlistform = () => {
       console.log(email);
       setLoading(true);
       try {
-        const response = await axios.post("http://localhost:8000/register", {
-          email: email,
-        });
+        const response = await axios.post(
+          `${process.env.PUBLIC_API_URL}/api/endpoint`,
+          {
+            email: email,
+          }
+        );
         console.log(response.data);
         toast.success(response.data.message, {
           position: "top-center",

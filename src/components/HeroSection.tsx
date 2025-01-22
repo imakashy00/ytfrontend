@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 // import { Button } from "./ui/button";
-import Screenshot from "../assets/Screenshot.png";
+import HeroImage from "../assets/HeroImage.png";
 import Waitlistform from "./Waitlistform";
 
 const HeroSection = () => {
@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="lg:min-w-[60%]">
         <Image
           className="rounded-2xl"
-          src={Screenshot}
+          src={HeroImage}
           alt="Picture of the author"
         />
       </div>

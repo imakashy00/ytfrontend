@@ -46,15 +46,29 @@ const Waitlistform = () => {
         });
         setEmail("");
         setLoading(false);
-      } catch {
-        // const errorMessage =
-        //   error.response?.data?.message ||
-        //   "Something went wrong. Please try again.";
-        toast.error("Something went wrong. Please try again.", {
-          position: "top-center",
-          autoClose: 3000,
-          className: "w-[90%] md:w-auto", // Make toast responsive
-        });
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          console.error(
+            "Error details:",
+            error.response?.data || error.message
+          );
+          toast.error(
+            error.response?.data?.message ||
+              "Something went wrong. Please try again.",
+            {
+              position: "top-center",
+              autoClose: 3000,
+              className: "w-[90%] md:w-auto",
+            }
+          );
+        } else {
+          console.error("Unexpected error:", error);
+          toast.error("Something went wrong. Please try again.", {
+            position: "top-center",
+            autoClose: 3000,
+            className: "w-[90%] md:w-auto",
+          });
+        }
       } finally {
         setLoading(false);
       }

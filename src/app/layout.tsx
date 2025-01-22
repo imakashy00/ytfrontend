@@ -4,6 +4,7 @@ import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,22 +16,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ytnotes - AI Powered Notes for youtube videos",
-  description: "Let AI take notes while you focus on learning",
+  title: "Your App Title",
+  description: "Your App Description",
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
-        sizes: "any",
+        rel: "icon",
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
       },
-    ],
-    apple: [
       {
-        url: "/apple-icon.png",
-        sizes: "180x180",
+        rel: "icon",
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
       },
     ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -39,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

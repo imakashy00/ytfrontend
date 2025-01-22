@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { headers } from "next/headers";
 // import 'react-toastify/dist/ReactToastify.css'
 
 const Waitlistform = () => {
@@ -24,9 +25,14 @@ const Waitlistform = () => {
       setLoading(true);
       try {
         const response = await axios.post(
-          `${process.env.PUBLIC_API_URL}/register`,
+          `${process.env.NEXT_PUBLIC_API_URL}/register`,
           {
             email: email,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
         );
         console.log(response.data);

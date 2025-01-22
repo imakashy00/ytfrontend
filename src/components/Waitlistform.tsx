@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 // import 'react-toastify/dist/ReactToastify.css'
 
 const Waitlistform = () => {

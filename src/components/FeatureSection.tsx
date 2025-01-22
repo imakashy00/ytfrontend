@@ -26,7 +26,7 @@ const FeatureSection = () => {
             Chat and Gain Ai insights:
           </h1>
           <p className="text-xl lg:text-2xl text-[#666666] ">
-            AI generates notes based on your input, saving you time and effort.
+            Clear doubts instantly with intelligent assistance.
           </p>
         </div>
         <div className="border-dashed hover:border hover:border-[#5d3fd3] border border-[#333333] rounded-xl p-5">
@@ -35,7 +35,7 @@ const FeatureSection = () => {
             Edit you Notes:
           </h1>
           <p className="text-xl lg:text-2xl text-[#666666] ">
-            AI generates notes based on your input, saving you time and effort.
+            Add new insights and screenshots to your notes seamlessly.
           </p>
         </div>
         <div className="border-dashed hover:border hover:border-[#5d3fd3] border border-[#333333] rounded-xl p-5">
@@ -44,7 +44,7 @@ const FeatureSection = () => {
             Store Chat and Notes:
           </h1>
           <p className="text-xl lg:text-2xl text-[#666666] ">
-            AI generates notes based on your input, saving you time and effort.
+            Save your notes and chats for easy access anytime.
           </p>
         </div>
       </div>
